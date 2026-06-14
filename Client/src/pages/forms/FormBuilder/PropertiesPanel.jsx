@@ -10,6 +10,15 @@ export const PropertiesPanel = ({
   disableAfterExpiry,
   setDisableAfterExpiry
 }) => {
+  const [optionsText, setOptionsText] = React.useState('');
+
+  // Sync options text with selectedField, only when selecting a different field
+  React.useEffect(() => {
+    if (selectedField) {
+      setOptionsText(selectedField.options?.join(', ') || '');
+    }
+  }, [selectedField?.id]);
+
   if (!selectedField) {
     return (
       <div className="bg-white border border-[#E2E8F0] rounded-xl shadow-[0_1px_3px_0_rgba(0,0,0,0.02)] overflow-hidden font-sans">
@@ -65,6 +74,7 @@ export const PropertiesPanel = ({
   };
 
   const handleOptionsChange = (val) => {
+    setOptionsText(val);
     const opts = val.split(',').map(o => o.trim()).filter(Boolean);
     onUpdateField(selectedField.id, { options: opts });
   };
@@ -115,7 +125,7 @@ export const PropertiesPanel = ({
           <div className="form-control w-full space-y-1">
             <label className="text-xs font-semibold text-[#0F172A] select-none">Options (separated by comma)</label>
             <textarea
-              value={selectedField.options?.join(', ') || ''}
+              value={optionsText}
               onChange={(e) => handleOptionsChange(e.target.value)}
               className="textarea textarea-bordered w-full text-xs h-20 leading-relaxed py-2"
               placeholder="e.g. Option 1, Option 2, Option 3"
