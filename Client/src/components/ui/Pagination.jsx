@@ -15,14 +15,14 @@ export const Pagination = ({
         <button
           onClick={() => onPageChange(Math.max(currentPage - 1, 1))}
           disabled={currentPage === 1}
-          className="btn btn-outline btn-sm font-semibold rounded-md"
+          className="inline-flex items-center justify-center px-3.5 py-1.5 border border-[#E2E8F0] bg-white rounded-md text-xs font-semibold text-[#0F172A] hover:bg-slate-50 disabled:opacity-40"
         >
           Previous
         </button>
         <button
           onClick={() => onPageChange(Math.min(currentPage + 1, totalPages))}
           disabled={currentPage === totalPages}
-          className="btn btn-outline btn-sm ml-3 font-semibold rounded-md"
+          className="inline-flex items-center justify-center px-3.5 py-1.5 border border-[#E2E8F0] bg-white rounded-md text-xs font-semibold text-[#0F172A] hover:bg-slate-50 disabled:opacity-40 ml-3"
         >
           Next
         </button>

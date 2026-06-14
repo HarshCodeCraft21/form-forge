@@ -76,12 +76,12 @@ export const FormTemplates = () => {
         </div>
 
         {/* Categories Tabs */}
-        <div className="flex bg-slate-50 p-1 rounded-lg border border-[#E2E8F0] shrink-0 self-start sm:self-auto gap-0.5">
+        <div className="flex bg-slate-50 p-1 rounded-lg border border-[#E2E8F0] shrink-0 self-stretch sm:self-auto gap-0.5 overflow-x-auto max-w-full flex-nowrap scrollbar-none">
           {TEMPLATE_CATEGORIES.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-3 py-1.5 rounded-md text-xs font-semibold transition-all ${
+              className={`px-3 py-1.5 rounded-md text-xs font-semibold transition-all whitespace-nowrap ${
                 activeCategory === cat.id 
                   ? 'bg-white text-[#0F172A] shadow-sm' 
                   : 'text-[#64748B] hover:text-[#0F172A]'

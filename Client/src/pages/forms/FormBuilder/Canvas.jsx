@@ -143,7 +143,7 @@ export const Canvas = ({
               isSelected 
                 ? 'border-[#4F46E5] ring-4 ring-[#4F46E5]/5 shadow-[0_4px_12px_rgba(79,70,229,0.04)]' 
                 : 'border-[#E2E8F0] hover:border-slate-300 shadow-[0_1px_2px_rgba(0,0,0,0.02)]'
-            } ${isHalfWidth ? 'inline-block w-[calc(50%-8px)] mr-2 align-top' : 'w-full block'}`}
+            } ${isHalfWidth ? 'w-full sm:inline-block sm:w-[calc(50%-8px)] sm:mr-2 align-top' : 'w-full block'}`}
           >
             
             {/* Field Header: Label & Action Controls */}

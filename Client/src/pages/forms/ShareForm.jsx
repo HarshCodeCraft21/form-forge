@@ -153,7 +153,7 @@ export const ShareForm = () => {
 
               {form.status === 'published' ? (
                 <div className="space-y-4">
-                  <div className="flex gap-2 items-center">
+                  <div className="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center">
                     <input
                       type="text"
                       readOnly

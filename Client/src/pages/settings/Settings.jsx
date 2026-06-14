@@ -125,7 +125,7 @@ export const Settings = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
         
         {/* Left tabs selector (3 Columns) */}
-        <section className="lg:col-span-3 flex flex-col gap-1 bg-white p-2.5 rounded-xl border border-[#E2E8F0] shadow-[0_1px_3px_0_rgba(0,0,0,0.02)]">
+        <section className="lg:col-span-3 flex flex-row lg:flex-col gap-1 bg-white p-2 px-3 lg:p-2.5 rounded-xl border border-[#E2E8F0] shadow-[0_1px_3px_0_rgba(0,0,0,0.02)] overflow-x-auto lg:overflow-x-visible scrollbar-none shrink-0 w-full lg:w-auto">
           {tabs.map((tab) => {
             const Icon = tab.icon;
             const isActive = activeTab === tab.id;
@@ -133,7 +133,7 @@ export const Settings = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-xs font-semibold text-left w-full transition-colors cursor-pointer ${
+                className={`flex items-center gap-3 px-4 py-2.5 rounded-lg text-xs font-semibold text-left whitespace-nowrap w-auto lg:w-full transition-colors cursor-pointer ${
                   isActive 
                     ? 'bg-slate-100 text-[#0F172A]' 
                     : 'text-[#64748B] hover:bg-slate-50 hover:text-[#0F172A]'

@@ -5,7 +5,7 @@ import { ChevronRight } from 'lucide-react';
 export const Breadcrumb = ({ items = [], className = '' }) => {
   return (
     <nav className={`text-xs select-none ${className}`} aria-label="Breadcrumb">
-      <ol className="inline-flex items-center space-x-1 md:space-x-1.5">
+      <ol className="flex flex-wrap items-center gap-y-1 text-xs">
         <li className="inline-flex items-center">
           <Link
             to="/dashboard"

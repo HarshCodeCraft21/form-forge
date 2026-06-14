@@ -464,7 +464,7 @@ export const PublicForm = () => {
                     return (
                       <div 
                         key={field.id} 
-                        className={`flex flex-col gap-1.5 ${isHalf ? 'inline-block w-[calc(50%-8px)] mr-2 align-top' : 'w-full block'}`}
+                        className={`flex flex-col gap-1.5 ${isHalf ? 'w-full sm:inline-block sm:w-[calc(50%-8px)] sm:mr-2 align-top' : 'w-full block'}`}
                       >
                         {field.type !== 'divider' && (
                           <label className="text-xs font-semibold text-[#0F172A] flex items-center gap-1">

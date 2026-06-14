@@ -201,20 +201,26 @@ export const Landing = () => {
             </div>
             {/* Visual preview list mock */}
             <div className="space-y-2.5">
-              <div className="flex items-center justify-between text-xs">
-                <span>Monday</span>
-                <div className="h-4 bg-[#4F46E5] rounded w-2/3" />
-                <span className="font-bold text-[#0F172A]">48 responses</span>
+              <div className="flex items-center justify-between text-xs gap-3">
+                <span className="w-20 shrink-0 text-left">Monday</span>
+                <div className="flex-1 bg-slate-200/50 rounded h-3 overflow-hidden">
+                  <div className="h-full bg-[#4F46E5] rounded" style={{ width: '66.6%' }} />
+                </div>
+                <span className="font-bold text-[#0F172A] shrink-0 text-right w-24">48 responses</span>
               </div>
-              <div className="flex items-center justify-between text-xs">
-                <span>Wednesday</span>
-                <div className="h-4 bg-[#4F46E5] rounded w-5/6" />
-                <span className="font-bold text-[#0F172A]">82 responses</span>
+              <div className="flex items-center justify-between text-xs gap-3">
+                <span className="w-20 shrink-0 text-left">Wednesday</span>
+                <div className="flex-1 bg-slate-200/50 rounded h-3 overflow-hidden">
+                  <div className="h-full bg-[#4F46E5] rounded" style={{ width: '83.3%' }} />
+                </div>
+                <span className="font-bold text-[#0F172A] shrink-0 text-right w-24">82 responses</span>
               </div>
-              <div className="flex items-center justify-between text-xs">
-                <span>Friday</span>
-                <div className="h-4 bg-[#4F46E5] rounded w-1/2" />
-                <span className="font-bold text-[#0F172A]">35 responses</span>
+              <div className="flex items-center justify-between text-xs gap-3">
+                <span className="w-20 shrink-0 text-left">Friday</span>
+                <div className="flex-1 bg-slate-200/50 rounded h-3 overflow-hidden">
+                  <div className="h-full bg-[#4F46E5] rounded" style={{ width: '50%' }} />
+                </div>
+                <span className="font-bold text-[#0F172A] shrink-0 text-right w-24">35 responses</span>
               </div>
             </div>
           </div>
