@@ -19,9 +19,10 @@ const app = express();
 
 // Middlewares
 app.use(cors({
-  origin: true, // Allow requests from any origin or specifically client's port
+  origin:['http://localhost:5173','https://formforge21.netlify.app'], // Allow requests from any origin or specifically client's port
   credentials: true
 }));
+
 app.use(cookieParser());
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
